@@ -1,0 +1,19 @@
+{
+    "name": "AshrafSaeed/php-service-container",
+    "description": "That is a simple PHP container service",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Muhammad Ashraf",
+            "email": "avanix.sol@gmail.com"
+        }
+    ],
+    "require": {
+        "psr/container": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Php\\Container\\": "src/"
+        }
+    }
+}
