@@ -34,9 +34,12 @@ class MailSender {
     }
 }
 
+// Without Container class
 $container = new Container;
 $instance = $container->get('User');
 $instance->sendMail("alex");
 
+
+// Without Container class
 $instance = new User(new Mail(new MailSender()));
 $instance->sendMail("alex");
