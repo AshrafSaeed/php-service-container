@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Container\Exceptions;
+namespace AshrafSaeed\Php\Container\Exceptions;
 
 use Psr\Container\NotFoundExceptionInterface;
 use Exception;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Php\Container;
+namespace AshrafSaeed\Php\Container;
 
 use ReflectionClass;
 use ReflectionException;
 use Psr\Container\ContainerInterface;
-use Php\Container\Exceptions\NotFoundException;
+use AshrafSaeed\Php\Container\Exceptions\NotFoundException;
 
 
 class Container implements ContainerInterface
