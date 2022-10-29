@@ -21,19 +21,6 @@ class Container implements ContainerInterface
         return $this->getInstance($item);
     }
 
-    public function has($id)
-    {
-        try {
-            $item = $this->resolve($id);
-        } catch (NotFoundException $e) {
-            return false;
-        }
-        if ($item instanceof ReflectionClass) {
-            return $item->isInstantiable();
-        }
-        return isset($item);
-    }
-
     public function set(string $key, $value)
     {
         $this->services[$key] = $value;
@@ -70,4 +57,18 @@ class Container implements ContainerInterface
         }
         return $item->newInstanceArgs($params);
     }
+
+    public function has($id)
+    {
+        try {
+            $item = $this->resolve($id);
+        } catch (NotFoundException $e) {
+            return false;
+        }
+        if ($item instanceof ReflectionClass) {
+            return $item->isInstantiable();
+        }
+        return isset($item);
+    }
+
 }
